@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1 id="heading" style="font-family: Arial"></h1>
+
+    <script>
+
+
+        let heading = document.getElementById("heading");
+
+        let ListofTeams = [" Barcelona", " RealMadrid", " ManCity", " ManUnited", " Liverpool", " Chelsea", " Bayern", " Arsenal", " PSG", " InterMilian", " Dortmund", " Milan"];
+        
+        function RandomTeams(aray, numOfTeams){
+            let shuffle = ListofTeams.sort(()=> 0.5 - Math.random());
+            return shuffle.slice(0, numOfTeams);
+        }
+        heading.innerHTML = `${RandomTeams(ListofTeams , 2)}`;
+        console.log(RandomTeams(ListofTeams, 2));
+    </script>
+
+</body>
+</html>
